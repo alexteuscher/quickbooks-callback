@@ -1,0 +1,19 @@
+{
+  "name": "quickbooks-callback",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "QuickBooks OAuth callback server for forwarding OAuth responses to main application",
+  "keywords": ["quickbooks", "oauth", "callback", "express", "vercel"],
+  "author": "Alex Teuscher",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
