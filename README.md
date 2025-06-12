@@ -127,4 +127,4 @@ For issues with:
 
 ---
 
-Built for seamless QuickBooks OAuth integration 🚀
+Built for seamless QuickBooks OAuth integration 🚀Trigger deployment
