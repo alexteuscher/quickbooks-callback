@@ -7,13 +7,17 @@
     "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "quickbooks",
+    "oauth",
+    "callback",
+    "express",
+    "vercel"
+  ],
+  "author": "Alex Teuscher",
   "license": "ISC",
   "description": "QuickBooks OAuth callback server for forwarding OAuth responses to main application",
-  "keywords": ["quickbooks", "oauth", "callback", "express", "vercel"],
-  "author": "Alex Teuscher",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^4.21.2"
   }
 }
