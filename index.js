@@ -61,7 +61,7 @@ app.get('/callback', (req, res) => {
   console.log('State:', state);
 
   // Build redirect URL to main application
-  const redirectUrl = new URL('http://localhost:3000/auth/callback');
+  const redirectUrl = new URL('http://localhost:3001/auth/callback');
   
   // Forward all OAuth parameters to the main application
   if (code) redirectUrl.searchParams.set('code', code);
@@ -85,7 +85,7 @@ app.get('/redirect', (req, res) => {
     });
   }
 
-  const redirectUrl = `http://localhost:3000/auth/callback?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state || '')}&realmId=${encodeURIComponent(realmId || '')}`;
+  const redirectUrl = `http://localhost:3001/auth/callback?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state || '')}&realmId=${encodeURIComponent(realmId || '')}`;
   
   res.json({
     message: 'Parameters ready for redirect',
@@ -103,7 +103,7 @@ app.post('/callback', (req, res) => {
   // Combine body and query parameters
   const params = { ...req.body, ...req.query };
   
-  const redirectUrl = new URL('http://localhost:3000/auth/callback');
+  const redirectUrl = new URL('http://localhost:3001/auth/callback');
   Object.keys(params).forEach(key => {
     if (params[key]) {
       redirectUrl.searchParams.set(key, params[key]);
@@ -134,7 +134,7 @@ app.use('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`QuickBooks OAuth Callback Server running on port ${PORT}`);
   console.log(`Callback URL: http://localhost:${PORT}/callback`);
-  console.log(`Redirect target: http://localhost:3000/auth/callback`);
+  console.log(`Redirect target: http://localhost:3001/auth/callback`);
 });
 
 module.exports = app;
